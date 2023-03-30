@@ -190,6 +190,9 @@ input, select, textarea {
 		max-width: 100%;
 		width: 51em;
 	}
+		.container.small {
+			width: 34em;
+		}
 
 		.container.medium {
 			width: 38.25em;
@@ -201,9 +204,14 @@ input, select, textarea {
 				width: 48em;
 			}
 
+				.container.small {
+					width: 32em;
+				}
+
 				.container.medium {
 					width: 36em;
 				}
+
 
 		}
 
@@ -212,6 +220,10 @@ input, select, textarea {
 			.container {
 				width: 95%;
 			}
+
+				.container.small {
+					width: 63.33%;
+				}
 
 				.container.medium {
 					width: 71.25%;
