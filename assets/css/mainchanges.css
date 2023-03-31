@@ -8,7 +8,7 @@
 */
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -184,38 +184,91 @@ input, select, textarea {
 	}
 
 /* Container */
+    .smallcontainer {
+        margin: 0 auto;
+		max-width: 100%;
+        width: 34em;
+    }
 
-	.container {
-		margin: 0 auto;
+    .container {
+        margin: 0 auto;
+		max-width: 100%;
+        width: 38.25em;
+    }
+
+    .largecontainer {
+        margin: 0 auto;
 		max-width: 100%;
 		width: 51em;
+    }
+
+	.container-leftpic
+	{
+		display: flex;
+		text-align: left;
+		margin:0;
+		padding: 0;
 	}
 
-		.container.medium {
-			width: 38.25em;
-		}
+	.newimage
+	{
+		height: 100%;
+		width: 50%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.halfcontainer
+	{
+		height: 100%;
+		width: 50%;
+		padding-left: 1em;
+		margin-top: auto;
+		margin-bottom: auto;
+		padding-bottom: 0;
+	}
 
 		@media screen and (max-width: 1280px) {
 
-			.container {
-				width: 48em;
-			}
+            .smallcontainer {
+                width: 32em;
+				font-size: 0.98em;
+				line-height: 1.13em;
+            }
 
-				.container.medium {
-					width: 36em;
-				}
+            .container {
+                width: 36em;
+				font-size: 0.98em;
+				line-height: 1.13em;
+            }
+
+			.largecontainer {
+				width: 48em;
+				font-size: 0.98em;
+				line-height: 1.13em;
+			}
 
 		}
 
 		@media screen and (max-width: 980px) {
 
-			.container {
+			.largecontainer {
 				width: 95%;
+				font-size: 0.96em;
+				line-height: 1.11em;
 			}
 
-				.container.medium {
-					width: 71.25%;
-				}
+            .smallcontainer {
+                width: 63.33%;
+				font-size: 0.96em;
+				line-height: 1.11em;
+            }
+
+            .container {
+                width: 71.25%;
+				font-size: 0.96em;
+				line-height: 1.11em;
+            }
 
 		}
 
@@ -223,6 +276,8 @@ input, select, textarea {
 
 			.container {
 				width: 95% !important;
+				font-size: 0.94em;
+				line-height: 1.09em;
 			}
 
 		}
@@ -231,6 +286,8 @@ input, select, textarea {
 
 			.container {
 				width: 90% !important;
+				font-size: 0.92em;
+				line-height: 1.07em;
 			}
 
 		}
@@ -239,9 +296,33 @@ input, select, textarea {
 
 			.container {
 				width: 100% !important;
+				font-size: 0.90em;
+				line-height: 1.05em;
+			}
+			.newimage
+			{
+				height: 100%;
+				width: 100%;
+				margin-top: 0;
+				margin-bottom: 20px;
+			}
+			.container-leftpic
+			{
+				display: block;
+				text-align: left;
+				margin:0;
+				padding: 0;
+			}
+			.halfcontainer
+			{
+				height: 100%;
+				width: 100%;
+				padding-left: 0;
+				padding-bottom: 0;
 			}
 
-		} 
+		}
+
 
 /* Row */
 
@@ -2174,6 +2255,22 @@ input, select, textarea {
 	}
 
 		.image:after {
+			-moz-transition: opacity 0.25s ease-in-out;
+			-webkit-transition: opacity 0.25s ease-in-out;
+			-ms-transition: opacity 0.25s ease-in-out;
+			transition: opacity 0.25s ease-in-out;
+			background-image: url("images/overlay.png");
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0.2;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.newimage:after {
 			-moz-transition: opacity 0.25s ease-in-out;
 			-webkit-transition: opacity 0.25s ease-in-out;
 			-ms-transition: opacity 0.25s ease-in-out;
