@@ -193,13 +193,13 @@ input, select, textarea {
     .container {
         margin: 0 auto;
 		max-width: 100%;
-        width: 38.25em;
+        width: 51em;
     }
 
     .largecontainer {
         margin: 0 auto;
 		max-width: 100%;
-		width: 51em;
+		width: 68em;
     }
 
 	.container-leftpic
@@ -210,10 +210,18 @@ input, select, textarea {
 		padding: 0;
 	}
 
+	.container-pic
+	{
+		display: flex;
+		text-align: left;
+		margin:0;
+		padding: 0;
+	}
+
 	.newimage
 	{
 		height: 100%;
-		width: 50%;
+		width: 25%;
 		margin-top: auto;
 		margin-bottom: auto;
 	}
@@ -221,8 +229,8 @@ input, select, textarea {
 	.halfcontainer
 	{
 		height: 100%;
-		width: 50%;
-		padding-left: 1em;
+		width: 75%;
+		padding-left: 3em;
 		margin-top: auto;
 		margin-bottom: auto;
 		padding-bottom: 0;
@@ -237,13 +245,13 @@ input, select, textarea {
             }
 
             .container {
-                width: 36em;
+                width: 48em;
 				font-size: 0.98em;
 				line-height: 1.13em;
             }
 
 			.largecontainer {
-				width: 48em;
+				width: 64em;
 				font-size: 0.98em;
 				line-height: 1.13em;
 			}
