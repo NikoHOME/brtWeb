@@ -1,4 +1,17 @@
 /* Container */
+
+html{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
 .smallcontainer {
     margin: 0 auto;
     max-width: 100%;
@@ -8,13 +21,13 @@
 .container {
     margin: 0 auto;
     max-width: 100%;
-    width: 38.25em;
+    width: 51em;
 }
 
 .largecontainer {
     margin: 0 auto;
     max-width: 100%;
-    width: 51em;
+    width: 68em;
 }
 
 .container-leftpic
@@ -25,10 +38,18 @@
     padding: 0;
 }
 
+.container-pic
+{
+    display: flex;
+    text-align: left;
+    margin:0;
+    padding: 0;
+}
+
 .newimage
 {
     height: 100%;
-    width: 50%;
+    width: 25%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -36,8 +57,8 @@
 .halfcontainer
 {
     height: 100%;
-    width: 50%;
-    padding-left: 1em;
+    width: 75%;
+    padding-left: 3em;
     margin-top: auto;
     margin-bottom: auto;
     padding-bottom: 0;
@@ -52,13 +73,13 @@
         }
 
         .container {
-            width: 36em;
+            width: 48em;
             font-size: 0.98em;
             line-height: 1.13em;
         }
 
         .largecontainer {
-            width: 48em;
+            width: 64em;
             font-size: 0.98em;
             line-height: 1.13em;
         }
@@ -137,7 +158,6 @@
         }
 
     }
-
 
 /* Wrap */
 
