@@ -1,0 +1,139 @@
+/* Container */
+.smallcontainer {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 34em;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 38.25em;
+}
+
+.largecontainer {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 51em;
+}
+
+.container-leftpic
+{
+    display: flex;
+    text-align: left;
+    margin:0;
+    padding: 0;
+}
+
+.newimage
+{
+    height: 100%;
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.halfcontainer
+{
+    height: 100%;
+    width: 50%;
+    padding-left: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 0;
+}
+
+    @media screen and (max-width: 1280px) {
+
+        .smallcontainer {
+            width: 32em;
+            font-size: 0.98em;
+            line-height: 1.13em;
+        }
+
+        .container {
+            width: 36em;
+            font-size: 0.98em;
+            line-height: 1.13em;
+        }
+
+        .largecontainer {
+            width: 48em;
+            font-size: 0.98em;
+            line-height: 1.13em;
+        }
+
+    }
+
+    @media screen and (max-width: 980px) {
+
+        .largecontainer {
+            width: 95%;
+            font-size: 0.96em;
+            line-height: 1.11em;
+        }
+
+        .smallcontainer {
+            width: 63.33%;
+            font-size: 0.96em;
+            line-height: 1.11em;
+        }
+
+        .container {
+            width: 71.25%;
+            font-size: 0.96em;
+            line-height: 1.11em;
+        }
+
+    }
+
+    @media screen and (max-width: 840px) {
+
+        .container {
+            width: 95% !important;
+            font-size: 0.94em;
+            line-height: 1.09em;
+        }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+        .container {
+            width: 90% !important;
+            font-size: 0.92em;
+            line-height: 1.07em;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .container {
+            width: 100% !important;
+            font-size: 0.90em;
+            line-height: 1.05em;
+        }
+        .newimage
+        {
+            height: 100%;
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .container-leftpic
+        {
+            display: block;
+            text-align: left;
+            margin:0;
+            padding: 0;
+        }
+        .halfcontainer
+        {
+            height: 100%;
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+
+    }
