@@ -1,5 +1,4 @@
 html{
-    background-color: antiquewhite;
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -8,10 +7,19 @@ html{
 	vertical-align: baseline;
     font-family:Arial, Helvetica, sans-serif;
 }
+body{
+    background-image: url("../../images/front-background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}
 
 a{
     text-decoration:solid;
     color: black;
+    margin: 0;
+    padding: 0;
 }
 
 h3{
@@ -40,7 +48,7 @@ hr{
 .largecontainer {
     margin: 0 auto;
     max-width: 100%;
-    width: 68em;
+    width: 90%;
 }
 
 .container-leftpic
@@ -48,8 +56,10 @@ hr{
     display: flex;
     text-align: left;
     margin-bottom: 5em;
-    background-color:bisque;
-    padding: 2em;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color:lightgray;
 }
 
 .container-rightpic
@@ -58,7 +68,9 @@ hr{
     text-align: right;
     margin-bottom: 5em;
     background-color: bisque;
-    padding: 2em;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .container-pic
@@ -69,7 +81,7 @@ hr{
     padding: 0;
 }
 
-.newimage
+.imageleft
 {
     height: 100%;
     width: 25%;
@@ -77,114 +89,86 @@ hr{
     margin-bottom: auto;
 }
 
-.halfcontainer
+.imageright
+{
+    height: 100%;
+    width: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 75%;
+    position: relative;
+}
+
+.containerleft
 {
     height: 100%;
     width: 75%;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-right: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 0;
+    right: 25%;
+    position: relative;
+}
+
+.containerright
+{
+    height: 100%;
+    width: 75%;
+    padding-left: 3%;
     margin-top: auto;
     margin-bottom: auto;
     padding-bottom: 0;
 }
 
-    @media screen and (max-width: 1280px) {
-
-        .smallcontainer {
-            width: 32em;
-            font-size: 0.98em;
-            line-height: 1.13em;
-        }
-
-        .container {
-            width: 48em;
-            font-size: 0.98em;
-            line-height: 1.13em;
-        }
-
-        .largecontainer {
-            width: 64em;
-            font-size: 0.98em;
-            line-height: 1.13em;
-        }
-
-    }
-
-    @media screen and (max-width: 980px) {
-
-        .largecontainer {
-            width: 95%;
-            font-size: 0.96em;
-            line-height: 1.11em;
-        }
-
-        .smallcontainer {
-            width: 63.33%;
-            font-size: 0.96em;
-            line-height: 1.11em;
-        }
-
-        .container {
-            width: 71.25%;
-            font-size: 0.96em;
-            line-height: 1.11em;
-        }
-
-    }
-
-    @media screen and (max-width: 840px) {
-
-        .container {
-            width: 95% !important;
-            font-size: 0.94em;
-            line-height: 1.09em;
-        }
-
-    }
-
-    @media screen and (max-width: 736px) {
-
-        .container {
-            width: 90% !important;
-            font-size: 0.92em;
-            line-height: 1.07em;
-        }
-
-    }
-
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 700px) {
 
         .container {
             width: 100% !important;
             font-size: 0.90em;
             line-height: 1.05em;
         }
-        .newimage
+        .imageleft
         {
             height: 100%;
             width: 100%;
         }
+        .imageright
+        {
+            height: 100%;
+            width: 100%;
+            left: auto;
+        }
         .container-leftpic
         {
             display:block;
-            text-align: left;
             margin-bottom: 3em;
             padding: 1em;
         }
         .container-rightpic
         {
             display:block;
-            text-align: left;
             margin-bottom: 3em;
             padding: 1em;
+            left: 0;
         }
-        .halfcontainer
+        .containerright
         {
+            position: block;
             height: 100%;
             width: 100%;
             padding: 0;
+            text-align: justify;
         }
-
+        .containerleft
+        {
+            position: block;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            right: auto;
+            text-align: justify;
+        }
     }
 
 /* Wrap */
