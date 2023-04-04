@@ -59,7 +59,7 @@ a, a:visited
     justify-content: center;
     width: 18%;
     height: 8vw;
-    top: 40vw;
+    top: calc(50% + 15vw);
     left: 41%;
     right: 41%;
     border-radius: 1vw;
@@ -79,7 +79,8 @@ a, a:visited
 #enter:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}*/
 
 .content {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
 
 #enter {
@@ -88,11 +89,16 @@ a, a:visited
 }
 
 #enter:target ~  .content  {
-    display: block;
+
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    opacity: 1;
 }
 
 #enter:target ~  .front-button {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
 
 /*
@@ -107,6 +113,7 @@ a, a:visited
 */
 
 #enter:target ~ .background {
+    transition: opacity 1s ease-out;
     opacity: 0.2;
 }
 
@@ -118,7 +125,7 @@ a, a:visited
     min-height: 100%;
     background-image: url("../../images/front-background.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
     background-attachment: fixed;
-    background-size: 90vw;
+    background-size: 80vw;
   }
