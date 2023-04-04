@@ -1,0 +1,294 @@
+html{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+a{
+    text-decoration:solid;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+h3{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+hr{
+    border: 1px solid black;
+}
+
+/* Container */
+
+.smallcontainer {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 34em;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 51em;
+}
+
+.largecontainer {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+}
+
+.container-leftpic
+{
+    display: flex;
+    text-align: left;
+    margin-bottom: 5em;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    /*background-color:lightgray;*/
+}
+
+.container-rightpic
+{
+    display: flex;
+    text-align: right;
+    margin-bottom: 5em;
+    /*background-color: bisque;*/
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.container-pic
+{
+    display: flex;
+    text-align: left;
+    margin:0;
+    padding: 0;
+}
+
+.imageleft
+{
+    height: 100%;
+    width: 33%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.imageright
+{
+    height: 100%;
+    width: 33%;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 70%;
+    position: relative;
+}
+
+.containerleft
+{
+    height: 100%;
+    width: 75%;
+    padding-right: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 0;
+    right: 30%;
+    position: relative;
+}
+
+.containerright
+{
+    height: 100%;
+    width: 75%;
+    padding-left: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 0;
+}
+
+    @media screen and (max-width: 900px) {
+
+        .container {
+            width: 100% !important;
+            font-size: 0.90em;
+            line-height: 1.05em;
+        }
+        .imageleft
+        {
+            position: relative;
+            height: 100%;
+            width: 70%;
+            left: 15%;
+        }
+        .imageright
+        {
+            height: 100%;
+            width: 70%;
+            left: -15%;
+        }
+        .container-leftpic
+        {
+            display:block;
+            margin-bottom: 3em;
+            padding: 1em;
+        }
+        .container-rightpic
+        {
+            display:block;
+            margin-bottom: 3em;
+            padding: 1em;
+            left: 0;
+        }
+        .containerright
+        {
+            position: block;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            text-align: justify;
+        }
+        .containerleft
+        {
+            position: block;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            right: auto;
+            text-align: justify;
+        }
+    }
+
+/* Wrap */
+
+.wrap-left, .wrap-rigth, .wrap-even{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+    
+.even-column {
+    width: 100%;
+    float: left;
+}
+
+.wrap-left .main-content, .wrap-left .sidebar{
+    width: 100%;
+    float: left;
+}
+
+.wrap-right .main-content, .wrap-right .sidebar{
+    width: 100%;
+    float: right;
+}
+
+/*3 Column Layout*/
+@media only screen and (min-width: 1024px) {
+.wrap-left, .wrap-right {
+    width: 1024px;
+    margin: 0 auto ;
+}
+.even-column-left {
+    width: 33.33%;
+    float: left;
+}
+.even-column-middle {
+    width: 33.33%;
+    float: left;
+}
+.even-column-right {
+    width: 33.33%;
+    float: left;
+}
+
+.wrap-left .main-content  {
+    width: 75% ;
+    float: left;
+}
+.wrap-right .main-content  {
+    width: 75%;
+    float: right;
+}
+.wrap-right .sidebar {
+    width: 25%;
+    float: right;
+}
+.wrap-left .sidebar {
+    width: 25%;
+    float: left;
+}
+
+.wrap35.wrap-left .main-content  {
+    width: 65% ;
+    float: left;
+}
+.wrap35.wrap-right .main-content  {
+    width: 65%;
+    float: right;
+}
+
+.wrap35.wrap-left .sidebar {
+    width: 35% ;
+    float: left;
+}
+.wrap35.wrap-right .sidebar {
+    width: 35% ;
+    float: right;
+}
+}
+
+/*Move Sidebar Position*/
+@media only screen and (min-width: 1024px) {
+    .wrap-left, .wrap-right, .main-content, .sidebar {
+        position: relative ;
+    }
+
+    .main-content, .sidebar, .even-column {
+        top: 0;
+    }
+
+    .wrap-left .sidebar {
+        left: -75% ; /*Width of #main-content*/
+    }
+
+    .wrap-right .sidebar {
+        right: -75%;
+    }
+
+    .wrap-left .main-content {
+        left: 25%; 
+    }
+    .wrap-right .main-content {
+        right: 25%; 
+    }
+
+    .wrap35.wrap-left .sidebar {
+        left: -65% ; 
+    }
+
+    .wrap35.wrap-right .sidebar {
+        right: -65%;
+    }
+
+    .wrap35.wrap-left .main-content {
+        left: 35%; 
+    }
+    .wrap35.wrap-right .main-content {
+        right: 35%; 
+    }
+}
+
+/*Wide Layout*/
+@media only screen and (min-width: 1200px) {
+    .wrap-left, .wrap-right {
+        width: 1140px;
+        margin: 0 auto;
+    }
+}
