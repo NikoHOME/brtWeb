@@ -10,7 +10,7 @@ if(video)
         arrow.style.opacity = '0.6'
         content.style.display = "block"
         document.documentElement.style.overflow = "auto"
-        localStorage.setItem("visited_before","true")
+        sessionStorage.setItem("visited_before","true")
     }, {once: true});
 }
 

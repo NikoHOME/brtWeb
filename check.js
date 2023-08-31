@@ -23,7 +23,7 @@
 
 function on_video_load()
 {
-    if(localStorage.getItem("visited_before") == "true")
+    if(sessionStorage.getItem("visited_before") == "true")
     {
         title_video.addEventListener("loadeddata", (event) => {
             console.log("??")
