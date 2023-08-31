@@ -1,4 +1,4 @@
-html{
+/* html{
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -6,14 +6,14 @@ html{
 	font: inherit;
 	vertical-align: baseline;
     font-family:Arial, Helvetica, sans-serif;
-}
-body{
+} */
+/* body{
     background-image: url("../../images/front-background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     background-position: center;
-}
+} */
 
 a{
     text-decoration:solid;
@@ -45,81 +45,115 @@ hr{
     width: 51em;
 }
 
-.largecontainer {
+
+.spacer_section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.firm_card_container {
     margin: 0 auto;
-    max-width: 100%;
-    width: 90%;
+    width: 100vw;
+    display: block;
 }
 
-.container-leftpic
-{
+/* Firm cards display */
+
+.firm_card {
     display: flex;
-    text-align: left;
-    margin-bottom: 5em;
+    margin-bottom: 50px;
+    margin-top: 50px;
     padding: 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 600px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.firm_card_row {
+    display: block;
+    height: 400px;
+}
+
+
+.firm_card_left {
     background-color:lightgray;
+    margin-left: 20px;
 }
 
-.container-rightpic
-{
-    display: flex;
-    text-align: right;
-    margin-bottom: 5em;
+.firm_card_right {
     background-color: bisque;
-    padding: 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    float: right;
+    margin-right: 20px;
 }
 
-.container-pic
-{
-    display: flex;
-    text-align: left;
-    margin:0;
-    padding: 0;
-}
 
-.imageleft
-{
+.firm_card_image {
     height: 100%;
-    width: 25%;
+    width: 300px;
     margin-top: auto;
     margin-bottom: auto;
+    object-fit: cover;
 }
 
-.imageright
-{
-    height: 100%;
-    width: 25%;
-    margin-top: auto;
-    margin-bottom: auto;
-    left: 75%;
+.firm_card_left .firm_card_image {
+
+}
+
+.firm_card_right .firm_card_image {
+    right: -300px;
     position: relative;
 }
 
-.containerleft
-{
+
+.firm_card_text_field {
     height: 100%;
     width: 75%;
     padding-right: 3%;
     margin-top: auto;
     margin-bottom: auto;
     padding-bottom: 0;
-    right: 25%;
+}
+
+.firm_card_left .firm_card_text_field {
+    margin-left: 50px;
+}
+
+.firm_card_right .firm_card_text_field {
+    right: 300px;
     position: relative;
 }
 
-.containerright
-{
-    height: 100%;
-    width: 75%;
-    padding-left: 3%;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-bottom: 0;
+
+.content_section_1{
+    background-image: url("../../www/workshop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
 }
+
+.content_section_2{
+    background-image: url("../../www/harbour.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+.content_section{
+    position: relative;
+    /* display: none; */
+    
+    z-index: 1;
+}
+
+.content {
+    display: none;
+}
+
 
     @media screen and (max-width: 700px) {
 
@@ -297,3 +331,7 @@ hr{
         margin: 0 auto;
     }
 }
+
+
+
+
