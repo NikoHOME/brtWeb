@@ -13,7 +13,7 @@
     <script>
         function on_video_load()
         {
-            if(localStorage.getItem("visited_before") == "true")
+            if(sessionStorage.getItem("visited_before") == "true")
             {
                 const title_video = document.querySelector(".title_video");
                 title_video.addEventListener("canplay", (event) => {
@@ -27,6 +27,45 @@
         window.addEventListener("load", (event) => {
             on_video_load();
         });
+        function send_mail()
+        {
+            //Space and \n charchters in mail
+            let break_line = "%0D%0A";
+            let space = "%20"
+
+            let name = document.querySelector('#name').value.replaceAll(" ", space);
+            let company = document.querySelector('#company').value.replaceAll(" ", space);
+            let subject = document.querySelector('#subject').value.replaceAll(" ", space);
+            let email = document.querySelector('#email').value.replaceAll(" ", space);
+            let phone = document.querySelector('#phone').value.replaceAll(" ", space);
+            let message = document.querySelector('#message').value.replaceAll(" ", space).replaceAll('\n', break_line);
+
+            
+            
+            let mail_string = "mailto:info@techpad.international?subject=" 
+            + subject + "&body=";
+
+            if(name != "")
+            {  
+                mail_string += "Name:" + space +  name + break_line;
+            }
+            if(company != "")
+            {
+                mail_string += "Company:" + space  + company + break_line;
+            }
+            if(email != "")
+            {
+                mail_string += "Email:" + space + email + break_line;
+            }
+            if(phone != "")
+            {
+                mail_string += "Tel:" + space  + phone + break_line;
+            }
+
+            mail_string += break_line + message
+            console.log(mail_string);
+            window.open(mail_string);
+        }
     </script>
     
 </head>
@@ -37,13 +76,63 @@
                 <!-- <source src="www/00_MAIN_1.mp4" type="video/mp4"> -->
             </video>
         </div>
-        <a href="#first_section">
+        <!-- <a href="#first_section">
             <img src="www/arrow_down.png" class="title_arrow">
-        </a>
+        </a> -->
+    </section>
+    <section class="content">
+        <div class="text_wall">
+            <div class="text_box">
+                TechPad International Ltd is a UK based company with international activities, which has been created to create a complex solution for technical support within several industries. 
+            </div>
+            <div class="text_box">
+                Firefighting – We are proud to have several years of experience within design, installation and servicing of firefighting systems mainly  installed within large commercial premises such as power plants, paper manufactures, wood industry production, automotive production, etc.  
+            </div>
+            <div class="text_box">
+                Steel prefabrication – We have large workshop where we are able to prefabricate any steel construction for ship industry. We have a large CNC plasma (3m x 12m) where we are able to cutout metal sheets up to 60mm thick.
+            </div>
+            <div class="text_box">
+                Underwater activities – We are constantly expanding and one of the recent tasks which we are able to undertake is underwater works. We have equipped our fleet with boats and equipment which allows us to carryout difficult underwater activities – welding, cutting, etc. Owning underwater drone allows us to do any underwater inspections of ground, hulls, etc.
+            </div>
+            <div class="text_box">
+                Overwater activities – We have a team of specialists who are ready to preform technical support on the water for small or large vessels. 
+            </div>
+            <div class="text_box">
+                TechPad International Ltd is constantly expanding… within industries and within the World…
+            </div>
+
+        </div>
     </section>
 
+    <footer class="footer">
+            <form >  
+                <div class="form_div form_div_info">
+                    <!-- <label for="name">Name:</label> -->
+                    <input id="name" class="form_input" placeholder="Name" />
+
+                    <!-- <label for="company">Company:</label> -->
+                    <input id="company" class="form_input" placeholder="Company" />
+
+                    <!-- <label for="subject">Subject:</label> -->
+                    <input id="subject" class="form_input" placeholder="Subject" />
+
+                    <!-- <label for="email">Contact email:</label> -->
+                    <input id="email" class="form_input" placeholder="Email" />
+
+                    <!-- <label for="phone">Contact tel no:</label> -->
+                    <input id="phone" class="form_input" placeholder="Phone" />
+                    
+                    <button type="button" onclick="send_mail()"> Send </button>
+                </div>
+                <div class="form_div form_div_message">
+                    <textarea id="message" placeholder="Message"></textarea>
+                </div>
+            </form>
+
+    </footer>
+
     <!-- <section class="spacer_section"> </section> -->
-    <section class="content">
+    <!-- <section class="content">
         <section class="content_section content_section_1" id="first_section">
             <div class="firm_card_container">
 
@@ -115,7 +204,7 @@
                 
             </div>
         </section>
-    </section>
+    </section> -->
 
     <!-- <section class="image_section">
         <div class="image_box">
