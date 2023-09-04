@@ -2,13 +2,9 @@
 <head>
     <title>Front</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- <link rel="stylesheet" href="assets/css/front3.css" />
-    <link rel="stylesheet" href="assets/css/new2.css" /> -->
     <link rel="stylesheet" href="assets/css/front.css" />
-    <link rel="stylesheet" href="assets/css/new.css" />
-    <!-- <script src="check.js"></script> -->
+    <link rel="icon" href="www/favicon.png">
     <script defer src="main.js"></script>
-
 
     <script>
         function on_video_load()
@@ -30,50 +26,95 @@
         });
         function send_mail()
         {
-            //Space and \n charchters in mail
-            let break_line = "%0D%0A";
-            let space = "%20"
+            let name = document.querySelector('#name').value;
+            let company = document.querySelector('#company').value;
+            let subject = document.querySelector('#subject').value;
+            let email = document.querySelector('#email').value;
+            let phone = document.querySelector('#phone').value;
+            let message = document.querySelector('#message').value;
 
-            let name = document.querySelector('#name').value.replaceAll(" ", space);
-            let company = document.querySelector('#company').value.replaceAll(" ", space);
-            let subject = document.querySelector('#subject').value.replaceAll(" ", space);
-            let email = document.querySelector('#email').value.replaceAll(" ", space);
-            let phone = document.querySelector('#phone').value.replaceAll(" ", space);
-            let message = document.querySelector('#message').value.replaceAll(" ", space).replaceAll('\n', break_line);
-
-            
-            
-            let mail_string = "mailto:info@techpad.international?subject=" 
-            + subject + "&body=";
+            let mail_string = "mailto:info@techpad.international?subject=" + subject + "&body=";
 
             if(name != "")
             {  
-                mail_string += "Name:" + space +  name + break_line;
+                mail_string += "Name: " + name + "\n";
             }
             if(company != "")
             {
-                mail_string += "Company:" + space  + company + break_line;
+                mail_string += "Company: " + company + "\n";
             }
             if(email != "")
             {
-                mail_string += "Email:" + space + email + break_line;
+                mail_string += "Email: " + email + "\n";
             }
             if(phone != "")
             {
-                mail_string += "Tel:" + space  + phone + break_line;
+                mail_string += "Tel: " + phone + "\n";
             }
 
-            mail_string += break_line + message
-            console.log(mail_string);
-            window.open(mail_string);
+            mail_string += "\n" + message;
+            
+            let encodedMail = encodeURI(mail_string);
+            window.open(encodedMail);
         }
+
+        let sound_off = false;
+
+        function volume_change()
+        {
+            let volume_button = document.querySelector("#volume_button");
+            let title_video = document.querySelector(".title_video");
+            
+            if(sound_off)
+            {
+                volume_button.classList.remove("volume_button_muted");
+                volume_button.classList.add("volume_button");
+                title_video.volume = 1
+                sound_off = false;
+            }
+            else
+            {
+                volume_button.classList.remove("volume_button");
+                volume_button.classList.add("volume_button_muted");
+                title_video.volume = 0
+                sound_off = true;
+            }
+            
+        }
+
+        function play_video()
+        {
+            let title_video = document.querySelector(".title_video");
+            let start_menu = document.querySelector(".start_menu");
+            
+            start_menu.style.opacity = "0";
+
+            title_video.play();
+
+
+        }
+
     </script>
     
 </head>
 <body>
+
+    <section class="start_menu">
+        <div class="menu_box center_xy">
+            <div class="button_box center_x">
+                <div class="button_row_play">
+                    <div class="play_button title_button" onclick="play_video()"></div>
+                </div>
+                <div class="button_row_volume">
+                    <div id="volume_button" class="volume_button title_button" onclick="volume_change()"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="video_section">
         <div class="video_box">
-            <video src="www/untitled.mp4" autoplay="true" class="title_video" muted="true">
+            <video src="www/untitled.mp4" class="title_video">
                 <!-- <source src="www/00_MAIN_1.mp4" type="video/mp4"> -->
             </video>
         </div>
