@@ -89,6 +89,16 @@
             
             start_menu.style.opacity = "0";
 
+            let play_button = document.querySelector(".play_button");
+            let volume_button = document.querySelector(".volume_button");
+
+            play_button.removeAttribute("onclick");
+            play_button.style.cursor = "auto";
+
+            volume_button.removeAttribute("onclick");
+            volume_button.style.cursor = "auto";
+
+
             title_video.play();
 
 
