@@ -3,22 +3,22 @@
     <title>Front</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/front.css" />
-    <link rel="icon" href="www/favicon.png">
-    <script defer src="main.js"></script>
+    <link rel="icon" href="assets/www/favicon.png">
+    <script defer src="assets/script/main.js"></script>
 
     <script>
         function on_video_load()
         {
-            if(sessionStorage.getItem("visited_before") == "true")
-            {
-                const title_video = document.querySelector(".title_video");
-                title_video.addEventListener("canplay", (event) => {
-                    title_video.play();
-                    title_video.pause();
-                    title_video.currentTime = 1000
-                    title_video.play();
-                });
-            }
+            // if(sessionStorage.getItem("visited_before") == "true")
+            // {
+            //     const title_video = document.querySelector(".title_video");
+            //     title_video.addEventListener("canplay", (event) => {
+            //         title_video.play();
+            //         title_video.pause();
+            //         title_video.currentTime = 1000
+            //         title_video.play();
+            //     });
+            // }
             window.scrollTo(0, 0);
         }
         window.addEventListener("load", (event) => {
@@ -90,7 +90,7 @@
             start_menu.style.opacity = "0";
 
             let play_button = document.querySelector(".play_button");
-            let volume_button = document.querySelector(".volume_button");
+            let volume_button = document.querySelector(".title_button");
 
             play_button.removeAttribute("onclick");
             play_button.style.cursor = "auto";
@@ -103,6 +103,7 @@
 
 
         }
+
 
     </script>
     
@@ -124,13 +125,9 @@
 
     <section class="video_section">
         <div class="video_box">
-            <video src="www/untitled.mp4" class="title_video" preload="auto">
-                <!-- <source src="www/00_MAIN_1.mp4" type="video/mp4"> -->
+            <video src="assets/www/untitled.mp4" class="title_video" preload="auto">
             </video>
         </div>
-        <!-- <a href="#first_section">
-            <img src="www/arrow_down.png" class="title_arrow">
-        </a> -->
     </section>
     <section class="content">
         <div class="text_wall">
@@ -163,19 +160,14 @@
             <form > 
 
                 <div class="form_div form_div_info">
-                    <!-- <label for="name">Name:</label> -->
                     <input id="name" class="form_input" placeholder="Name" />
 
-                    <!-- <label for="company">Company:</label> -->
                     <input id="company" class="form_input" placeholder="Company" />
 
-                    <!-- <label for="subject">Subject:</label> -->
                     <input id="subject" class="form_input" placeholder="Subject" />
 
-                    <!-- <label for="email">Contact email:</label> -->
                     <input id="email" class="form_input" placeholder="Email" />
 
-                    <!-- <label for="phone">Contact tel no:</label> -->
                     <input id="phone" class="form_input" placeholder="Phone" />
                     
                     <button type="button" onclick="send_mail()"> Send </button>
@@ -186,86 +178,4 @@
             </form>
 
     </footer>
-
-    <!-- <section class="spacer_section"> </section> -->
-    <!-- <section class="content">
-        <section class="content_section content_section_1" id="first_section">
-            <div class="firm_card_container">
-
-                <div class="firm_card_row">
-                    <div class="firm_card firm_card_left">
-                        <img class="firm_card_image" src="./www/weld.jpg" alt="" />
-                        <div class="firm_card_text_field">
-                        <a href="contact.html">
-                            <h3>Company name</h3>
-                        </a>
-                        <hr>
-                            <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="firm_card_row">
-                    <div class="firm_card firm_card_right">
-                        <img class="firm_card_image" src="www/weld.jpg" alt="" />
-                        <div class="firm_card_text_field">
-                        <a href="contact.html">
-                            <h3>Company name</h3>
-                        </a>
-                        <hr>
-                            <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="firm_card_row">
-                    <div class="firm_card firm_card_left">
-                        <img class="firm_card_image" src="www/weld.jpg" alt="" />
-                        <div class="firm_card_text_field">
-                        <a href="contact.html">
-                            <h3>Company name</h3>
-                        </a>
-                        <hr>
-                            <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="content_section content_section_2">
-                <div class="firm_card_row">
-                    <div class="firm_card firm_card_right">
-                        <img class="firm_card_image" src="www/weld.jpg" alt="" />
-                        <div class="firm_card_text_field">
-                        <a href="contact.html">
-                            <h3>Company name</h3>
-                        </a>
-                        <hr>
-                            <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="firm_card_row">
-                    <div class="firm_card firm_card_left">
-                        <img class="firm_card_image" src="www/weld.jpg" alt="" />
-                        <div class="firm_card_text_field">
-                        <a href="contact.html">
-                            <h3>Company name</h3>
-                        </a>
-                        <hr>
-                            <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    </section> -->
-
-    <!-- <section class="image_section">
-        <div class="image_box">
-            <img src="www/logo_capital_large.png" class="background_image">
-        </div>
-    </section> -->
-
 </body>

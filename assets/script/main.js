@@ -5,7 +5,6 @@ const text_wall = document.querySelector(".text_wall")
 
 if(video)
 {
-    
     video.addEventListener("ended", (event) => {
         let start_menu = document.querySelector(".start_menu");
         //sessionStorage.setItem("visited_before","true")

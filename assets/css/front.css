@@ -85,7 +85,7 @@ body {
 
 @font-face {
     font-family: custom-font;
-    src: url(../../www/3ds\ Light.otf);
+    src: url(../www/3ds\ Light.otf);
 }
 
 .text_wall {
@@ -272,14 +272,14 @@ form {
     width: 200px;
     height: 200px;
     background-size: contain;
-    background-image: url("../../www/play_button_grey.png");
+    background-image: url("../www/play_button_grey.png");
 }
 .volume_button {
     margin: auto;
     width: 64px;
     height: 64px;
     background-size: contain;
-    background-image: url("../../www/volume_up.png");
+    background-image: url("../www/volume_up.png");
 }
 
 .volume_button_muted {
@@ -287,7 +287,7 @@ form {
     width: 64px;
     height: 64px;
     background-size: contain;
-    background-image: url("../../www/volume_down.png"); 
+    background-image: url("../www/volume_down.png"); 
 }
 
 .form_title {
