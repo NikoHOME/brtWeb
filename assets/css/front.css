@@ -6,7 +6,7 @@ html {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: top;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'custom-font';
     scroll-behavior: smooth;
     overflow: hidden;
 }
@@ -89,19 +89,20 @@ body {
 }
 
 .text_wall {
-    font-family: 'custom-font';
+    /* font-family: 'custom-font'; */
     font-size:x-large;
-    margin-top: 200px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
     position: relative;
     z-index: 2;
 }
 
 .text_box {
     text-align: center;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 250px;
+    margin-bottom: 250px;
 }
 
 
@@ -124,16 +125,22 @@ textarea {
     height: 12rem;
     resize: none;
     border: 1px solid #666;
-    color: #ddd;
+    color: #2b2b2b;
     font-size: 14px;
-    background-color: #202020;
+    background-color: #eeeeee;
+    font-family: "custom-font";
+}
+
+input {
+    font-family: "custom-font";
 }
 
 button {
     line-height: 1.5rem;
     border: 0;
     outline: none;
-    font-family: inherit;
+    /* font-family: inherit; */
+    font-family: "custom-font";
     appearance: none;
 }
 
@@ -148,7 +155,7 @@ button {
     padding-bottom: 0.5em;
     /* padding: 0.5rem 1rem; */
     border-radius: 0.25rem;
-    background-color: rgba(78, 94, 114, 0.9);
+    background-color: rgba(46, 55, 66, 0.9);
     color: white;
     font-size: 1rem;
     transition: background-color 0.2s;
@@ -169,7 +176,7 @@ textarea:focus {
     background: none;
     border: none;
     border-bottom: 1px solid #666;
-    color: #ddd;
+    color: #141414;
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
@@ -197,14 +204,7 @@ form {
     opacity: 0;
     transition: opacity 4s;
 }
-.footer {
-    background-color: #202020;
-    box-shadow: inset 0 9px 25px -16px #000;
-    color: white;
-    height: 400px;
-    z-index: 3;
-    position: relative;
-}
+
 
 .start_menu {
     position: fixed;
@@ -291,7 +291,21 @@ form {
 }
 
 .form_title {
-    
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(48, 48, 48);
+    font-size: 2rem;
+}
+
+.footer {
+    /* background-color: #202020; */
+    background-color: #ddd;
+    box-shadow: inset 0 9px 25px -16px #e0e0e0;
+    color: rgb(0, 0, 0);
+    height: 400px;
+    z-index: 3;
+    position: relative;
 }
 
 
@@ -314,6 +328,21 @@ form {
     .text_box {
         margin-left: 10px !important;
         margin-right: 10px !important;
+    }
+
+    .form_div_message {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .form_div_info {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .text_box {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important;
     }
 
 
