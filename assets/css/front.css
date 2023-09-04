@@ -174,7 +174,7 @@ textarea:focus {
     text-transform: uppercase;
     outline: none;
     transition: border-color .2s;
-  }
+}
 
 .form_div label {
     display: block;
@@ -290,6 +290,11 @@ form {
     background-image: url("../../www/volume_down.png"); 
 }
 
+.form_title {
+    
+}
+
+
 
 @media screen and (max-width: 1000px) {
     .title_video{
@@ -300,4 +305,16 @@ form {
         left: 0% !important; 
         height: 50vh !important;
     }
+
+    .text_wall {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .text_box {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+
 }
